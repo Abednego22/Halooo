@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DUKUNGAN SEMANGAT DARI LUDO DAN NURUL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body
+    style="
+      background-image: url(https://images.unsplash.com/photo-1515191107209-c28698631303?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    "
+    class="flex justify-center h-screen items-center"
+  >
+    <div
+      class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+      id="kartu"
+    >
+      <h1 class="text-3xl">SEMANGAT YA MAMI</h1>
+      <h1
+        class="text-4xl text-blue-500 font-bold animate__animated animate__pulse animate__infinite"
+      >
+        VANIA
+      </h1>
+      <button
+        class="p-2 bg-blue-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+        onclick="ubahKartu()"
+      >
+        KUY DIKLIK!
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      const defaults = {
+        spread: 360,
+        ticks: 50,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["star"],
+        colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+      };
+
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 40,
+          scalar: 1.2,
+          shapes: ["star"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 10,
+          scalar: 0.75,
+          shapes: ["circle"],
+        });
+      }
+
+      setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
+      let kartu = document.getElementById("kartu");
+      function ubahKartu() {
+        kartu.innerHTML = `    <h1 class="font-semibold text-wrap animate__animated animate__zoomIn">
+      Wir sind Proud banget lihat semangat mami kembali für Lernen ke Germany! Diese Reise maybe nicht selalu mudah, tapi wir sind wießen mami kuat dan mampu melewati semuanya. Every Step yang mami lakukan nun adalah langkah kecil menuju impian besar ke Jerman! ✨. zöger nicht, gib nicht auf! Nurul dan Ludo selalu ada di sini buat kasih support buat mami. Kamu pasti bisa, Mami! 💪🔥🚀 Semangat terus ya! 💕
+    </h1>
+    <h2 class="mt-3 animate__animated animate__fadeIn">
+      - Dari : Nurul Schwein und Ludo Hund -
+    </h2>
+    <button
+      class="p-2 bg-slate-600 text-white rounded mt-5 hover:bg-slate-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+      onclick="refresh()"
+    >
+      Tutup
+    </button>
+    `;
+      }
+      function refresh() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
